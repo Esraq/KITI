@@ -57,8 +57,8 @@ class LoginController extends Controller
             case 'user':
                 return 'home';
                 break;
-            case 'whef':
-                return 'patient_dashboard';
+            case 'manager':
+                return 'manager_dashboard';
                 break;
             case 'super_admin':
                 return 'admin_dashboard';

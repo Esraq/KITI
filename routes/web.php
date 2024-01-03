@@ -9,6 +9,13 @@ use App\Http\Controllers\admin\robot\ControlPanelController;
 
 use App\Http\Controllers\admin\robot\LocationController;
 
+use App\Http\Controllers\admin\restaurent\ManagerController;
+
+
+use App\Http\Controllers\restaurent\Itemcontroller;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +36,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+
+
+
+///Route::resource('/product', ProductController::class);
+
 Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
 
@@ -42,4 +55,20 @@ Route::resource('/control_panel', ControlPanelController::class);
 Route::resource('/location',LocationController::class);
 
 
+Route::resource('/item', ItemController::class);
+
 });
+
+
+
+Route::group(['middleware' => ['auth', 'manager']], function() {
+
+    Route::get('/manager_dashboard', [App\Http\Controllers\Restaurent\ManagerController::class, 'index'])->name('manager_dashboard');
+    
+    
+    
+    
+    Route::resource('/item', ItemController::class);
+    
+    });
+    
