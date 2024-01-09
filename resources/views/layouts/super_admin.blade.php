@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/home">KITI</a>
+                <a class="navbar-brand" href="/admin_dashboard">KITI</a>
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -72,16 +72,18 @@ font-size: 16px;"> {{ Auth::user()->name }}&nbsp <a href="../logout" class="btn 
                 <ul class="nav" id="main-menu">
 
 
+           
+                  
                 <li>
                         <a  href="#"><i class="fa fa-desktop fa-3x"></i>Robot</a>
 
                         <ul class="nav nav-second-level">
                         <li>
-                                <a href="{{url('/banner')}}">Robot Location</a>
+                                <a href="{{url('/location')}}">Robot Location</a>
                             </li>
 
                             <li>
-                                <a href="{{url('/banner-list')}}">Control Panel</a>
+                                <a href="{{url('/control_panel')}}">Control Panel</a>
                             </li>
                            </ul>
 
@@ -95,16 +97,16 @@ font-size: 16px;"> {{ Auth::user()->name }}&nbsp <a href="../logout" class="btn 
 
 
                             <li>
-                                <a href="{{url('/content-list')}}">Pending Order</a>
+                                <a href="{{url('/pending_order')}}">Pending Order</a>
                             </li>
 
 
                             <li>
-                                <a href="{{url('/content-list')}}">Accepted Order</a>
+                                <a href="{{url('/admin_order_accept_list')}}">Accepted Order</a>
                             </li>
 
                             <li>
-                                <a href="{{url('/content-list')}}">Cancelled Order</a>
+                                <a href="{{url('/admin_order_cancel_list')}}">Cancelled Order</a>
                             </li>
 
 
@@ -122,15 +124,12 @@ font-size: 16px;"> {{ Auth::user()->name }}&nbsp <a href="../logout" class="btn 
                                     </li>
 
                                     <li>
-                                        <a href="/register">Add Admin</a>
+                                        <a href="/user_list">User List</a>
                                     </li>
 
-                                    <li>
-                                        <a href="/admin-list">Admin List</a>
-                                    </li>
+                                   
 
-
-
+                       
 
 
                                 </ul>
@@ -142,7 +141,7 @@ font-size: 16px;"> {{ Auth::user()->name }}&nbsp <a href="../logout" class="btn 
                     </li>
 
 
-
+                     
 
 
 
