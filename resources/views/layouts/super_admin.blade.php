@@ -120,7 +120,7 @@ font-size: 16px;"> {{ Auth::user()->name }}&nbsp <a href="../logout" class="btn 
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i>Settings<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                         <li>
-                                        <a href="{{url('/change-password')}}">Change Password</a>
+                                        <a href="{{url('/change_password')}}">Change Password</a>
                                     </li>
 
                                     <li>
